@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'MontBlancBold';
+    src: url('/fonts/MontBlanc-Trial-Bold.ttf') format('truetype');
+    font-weight: 110pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontBlancRegular';
+    src: url('/fonts/MontBlanc-Trial-Regular.ttf') format('truetype');
+    font-weight: 30pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-orange: #f25430;
+    --color-orange-alternate: #ff9929;
+    --color-dark: #000000;
+    --color-light: #FFFFFF;
+    --color-light-gray: #9A9A9A;
+    --color-dark-gray: #353535;
+    --color-green: #0e6666;
+    --font-family-base: 'MontBlancBold', sans-serif;
+    --font-family-text: 'MontBlancRegular', sans-serif;
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-green) !important;
+    color: var(--color-light) !important; 
+    position: relative; /* Добавлено для позиционирования кругов */
+}
+
+.l {
+    padding-bottom: 30px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login {
+    background-color: var(--color-orange);
+    padding: 2vw;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+    position: relative;
+    font-family: var(--font-family-base);
+    width: 70vw;  /* Используем vw для адаптивности */
+    height: 70vw; /* Используем vw для адаптивности */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--transition-duration);
+}
+
+.Login h2 {
+    margin-top: 0;
+    font-family: var(--font-family-base);
+}
+
+.inputBx {
+    margin-bottom: 15px;
+}
+
+.inputBx input,
+.Login button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: white;
+    font-family: var(--font-family-base);
+}
+
+.Links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Links a {
+    padding-top: 10px;
+    text-decoration: none;
+    color: var(--color-light); 
+    font-family: var(--font-family-base);
+}
+
+.Login button:hover {
+    background-color: var(--color-dark-gray); 
+}
+/* Круги */
+.circle {
+    position: fixed;
+    width: 50vw; /* Ширина круга зависит от ширины окна */
+    height: 50vw; /* Высота круга зависит от ширины окна */
+    background-color: var(--color-orange-alternate);
+    border-radius: 50%;
+    top: 50%; /* Центрируем по вертикали */
+    left: -25vw; /* Сдвигаем круг на половину его ширины */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    overflow: hidden; /* Скрываем часть круга за пределами экрана */
+    transition: all var(--transition-duration);
+}
+
+/* Второй круг (справа) */
+.circle-bottom-right {
+    position: fixed;
+    width: 50vw; /* Ширина круга зависит от ширины окна */
+    height: 50vw; /* Высота круга зависит от ширины окна */
+    background-color: var(--color-orange-alternate);
+    border-radius: 50%;
+    top: 50%; /* Центрируем по вертикали */
+    right: -25vw; /* Сдвигаем круг на половину его ширины */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    overflow: hidden; /* Скрываем часть круга за пределами экрана */
+    transition: all var(--transition-duration);
+}
+@media (min-width: 1103px) {
+    .Login {
+        width: 40vw;  /* Пропорциональная ширина */
+        height: 40vw; /* Пропорциональная высота */
+    }
+
+    .circle {
+        width: 50vw; /* Пропорциональная ширина круга */
+        height: 50vw; /* Пропорциональная высота круга */
+        left: -25vw; /* Сдвигаем круг влево */
+    }
+
+    .circle-bottom-right {
+        width: 50vw; /* Пропорциональная ширина круга */
+        height: 50vw; /* Пропорциональная высота круга */
+        right: -25vw; /* Сдвигаем круг вправо */
+    }
+}
+@media (max-width: 1103px) {
+    .Login {
+        width: 500px;  /* Фиксированная ширина для .Login */
+        height: 500px; /* Фиксированная высота для .Login */
+        padding: 20px; /* Фиксированное паддинг */
+    }
+
+    .circle {
+        width: 500px; /* Фиксированная ширина круга */
+        height: 500px; /* Фиксированная высота круга */
+        left: -250px; /* Центрируем круг на экране */
+    }
+
+    .circle-bottom-right {
+        width: 500px; /* Фиксированная ширина круга */
+        height: 500px; /* Фиксированная высота круга */
+        right: -250px; /* Центрируем круг на экране */
+    }
+
+    .inputBx input,
+    .Login button {
+        padding: 10px;  /* Уменьшаем паддинг для кнопок и инпутов */
+        font-size: 1em;  /* Уменьшаем размер шрифта */
+    }
+}

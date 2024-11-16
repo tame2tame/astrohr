@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'MontBlancBold';
+    src: url('/fonts/MontBlanc-Trial-Bold.ttf') format('truetype');
+    font-weight: 110pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontBlancRegular';
+    src: url('/fonts/MontBlanc-Trial-Regular.ttf') format('truetype');
+    font-weight: 30pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-orange: #f25430;
+    --color-orange-alternate: #ff9929;
+    --color-dark: #000000;
+    --color-light: #FFFFFF;
+    --color-light-gray: #9A9A9A;
+    --color-dark-gray: #353535;
+    --color-green: #0e6666;
+    --font-family-base: 'MontBlancBold', sans-serif;
+    --font-family-text: 'MontBlancRegular', sans-serif;
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-green) !important;
+    color: var(--color-light) ; 
+    position: relative; /* Добавлено для позиционирования кругов */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: var(--font-family-base);
+    text-align: center;
+}
+
+.card {
+    background-color: var(--color-orange)!important; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+    font-family: var(--font-family-base);
+    width: 100%;
+    max-width: 500px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card strong {
+    color: var(--color-light);
+}
+
+.btn-primary {
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--color-light);
+    font-family: var(--font-family-base);
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark-gray);
+}

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'MontBlancBold';
+    src: url('/fonts/MontBlanc-Trial-Bold.ttf') format('truetype');
+    font-weight: 110pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontBlancRegular';
+    src: url('/fonts/MontBlanc-Trial-Regular.ttf') format('truetype');
+    font-weight: 30pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-orange: #f25430;
+    --color-orange-alternate: #ff9929;
+    --color-dark: #000000;
+    --color-light: #FFFFFF;
+    --color-light-gray: #9A9A9A;
+    --color-dark-gray: #353535;
+    --color-green: #0e6666;
+    --font-family-base: 'MontBlancBold', sans-serif;
+    --font-family-text: 'MontBlancRegular', sans-serif;
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-green) !important;
+    color: var(--color-dark) !important; 
+    position: relative; 
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: var(--font-family-base);
+    text-align: center;
+}

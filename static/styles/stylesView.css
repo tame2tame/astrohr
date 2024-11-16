@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'MontBlancBold';
+    src: url('/fonts/MontBlanc-Trial-Bold.ttf') format('truetype');
+    font-weight: 110pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontBlancRegular';
+    src: url('/fonts/MontBlanc-Trial-Regular.ttf') format('truetype');
+    font-weight: 30pt;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-orange: #f25430;
+    --color-orange-alternate: #ff9929;
+    --color-dark: #000000;
+    --color-light: #FFFFFF;
+    --color-light-gray: #9A9A9A;
+    --color-dark-gray: #353535;
+    --color-green: #0e6666;
+    --font-family-base: 'MontBlancBold', sans-serif;
+    --font-family-text: 'MontBlancRegular', sans-serif;
+    --transition-duration: 0.2s;
+}
+
+body {
+    background-color: var(--color-green);
+    font-family: var(--font-family-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-base);
+}
+
+.btn-success {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    font-family: var(--font-family-base);
+}
+
+.btn-warning {
+    background-color: var(--color-orange-alternate);
+    border-color: var(--color-orange-alternate);
+    font-family: var(--font-family-base);
+}
+
+.btn-danger {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    font-family: var(--font-family-base);
+}
+
+.btn-primary {
+    background-color: var(--color-dark-gray);
+    border-color: var(--color-dark-gray);
+    font-family: var(--font-family-base);
+}
+
+.card-title {
+    font-family: var(--font-family-base);
+}
+
+.card-text {
+    font-family: var(--font-family-text);
+}
